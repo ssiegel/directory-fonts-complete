@@ -5,6 +5,7 @@ var isWoff = require('is-woff');
 var isWoff2 = require('is-woff2');
 var woff2rs = require('@woff2/woff2-rs');
 var opentype = require('opentype.js');
+var ur = require('@japont/unicode-range');
 var path = require('path');
 
 function getNormalizedFontFormatByBuffer(buffer) {
@@ -55,6 +56,12 @@ function addFontToFoundryByPath(foundry, resolvedFilePath, relativeFilePath, swa
 				}
 
 				foundryStyle.url[fontFormat] = relativeFilePath;
+				var range = Object.entries(rawData.glyphs.glyphs).reduce((range, [_, glyph]) => range.concat(glyph.unicodes), []);
+				if ('range' in foundryStyle) {
+					foundryStyle.range = ur.UnicodeRange.stringify(ur.UnicodeRange.parse(foundryStyle.range).filter((i) => range.includes(i)));
+				} else {
+					foundryStyle.range = ur.UnicodeRange.stringify(range);
+				}
 			}
 		}
 	}
