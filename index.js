@@ -69,13 +69,15 @@ module.exports = function (relativeDirPath, relativeFontPath, swapKeys) {
 	var foundry = {};
 
 	if (fs.existsSync(resolvedDirPath) && fs.lstatSync(resolvedDirPath).isDirectory()) {
-		var filePaths = fs.readdirSync(resolvedDirPath);
+		var filePaths = fs.readdirSync(resolvedDirPath, { recursive: true });
 
 		filePaths.forEach(function (filePath) {
 			var resolvedFilePath = resolvedDirPath + '/' + filePath;
 			var relativeFilePath = relativeFontPath + '/' + filePath;
 
-			addFontToFoundryByPath(foundry, resolvedFilePath, relativeFilePath, swapKeys);
+			if (fs.lstatSync(resolvedFilePath).isFile()) {
+				addFontToFoundryByPath(foundry, resolvedFilePath, relativeFilePath, swapKeys);
+			}
 		});
 	}
 
