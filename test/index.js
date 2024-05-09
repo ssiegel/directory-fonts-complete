@@ -10,7 +10,8 @@ const expected = {
           url: {
             otf: '/fonts/FiraCode-Regular.otf',
             ttf: '/fonts/FiraCode-Regular.ttf',
-            woff: '/fonts/FiraCode-Regular.woff'
+            woff: '/fonts/FiraCode-Regular.woff',
+            woff2: '/fonts/FiraCode-Regular.woff2'
           }
         }
       }
@@ -27,7 +28,8 @@ const expected_swapped = {
           url: {
             otf: '/fonts/FiraCode-Regular.otf',
             ttf: '/fonts/FiraCode-Regular.ttf',
-            woff: '/fonts/FiraCode-Regular.woff'
+            woff: '/fonts/FiraCode-Regular.woff',
+            woff2: '/fonts/FiraCode-Regular.woff2'
           }
         }
       }
