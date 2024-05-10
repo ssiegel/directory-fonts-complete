@@ -337,16 +337,6 @@ is-unicode-supported@^0.1.0:
   resolved "https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-0.1.0.tgz"
   integrity sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==
 
-is-woff@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/is-woff/-/is-woff-1.0.3.tgz"
-  integrity sha512-gm8k3MyCWQaum1kE91X8GYPuUIS/SeBleKfi85Oszeqn2pHNSY4TP5AUKFCLTaruX2HzLv9dQmS8+N8vDJtrQA==
-
-is-woff2@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/is-woff2/-/is-woff2-1.0.0.tgz"
-  integrity sha512-7RmH5rCoOpB0FpHtMHuQOXZjWyaFoCHmjCA72DlyHQ5SAVZC0/RDhhs/88Dzucr5qyU4eA0QvDbiW56IarjsnQ==
-
 js-yaml@4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz"
